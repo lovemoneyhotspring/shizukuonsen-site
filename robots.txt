@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://shizukuonsen.com/sitemap.xml
 Sitemap: https://shizukuonsen.com/rakuyoko/sitemap.xml
