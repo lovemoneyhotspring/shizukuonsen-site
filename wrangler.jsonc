@@ -1,0 +1,9 @@
+// Cloudflare Workers の設定。Workers Builds (Git 連携) がこれを読んで公開する。
+// 公開ファイルは public/ に入れる (この設定ファイル自体を配信しないため)。
+{
+  "name": "shizukuonsen",
+  "compatibility_date": "2026-09-01",
+  "assets": { "directory": "./public" },
+  // workers.dev のアドレスは使わない (メールアドレス由来の名前が公開されるため)
+  "workers_dev": false
+}
