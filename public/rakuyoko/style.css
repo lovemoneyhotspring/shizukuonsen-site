@@ -1,22 +1,22 @@
 /* ラクヨコの買い方メモ — 配色と余白の基準をここに集約する。
-   方針: 価格と制度を扱うので落ち着いた紙面に寄せる。見出しは明朝、本文はゴシック。
-   彩度の高い色はアクセント（湯の色）と価格だけに使う。 */
+   方針: 書き手「しずく」に合わせて、暖かく角の丸い紙面にする。見出しは丸ゴシック。
+   彩度の高い色はアクセント（湯あがりの色）と価格だけに使う。ダークモードは持たない。 */
 :root {
-  --bg: #faf8f5;
-  --surface: #fff;
-  --surface-2: #f4f1ec;
-  --ink: #23201c;
-  --ink-2: #4a443c;
-  --muted: #6e665d;
-  --line: #e7e0d6;
-  --line-2: #d9d0c3;
-  --accent: #14707e;
-  --accent-ink: #0b5460;
-  --accent-bg: #e9f3f3;
-  --price: #b4402f;
-  --radius: 10px;
-  --shadow: 0 1px 2px rgba(35, 32, 28, .05), 0 4px 16px rgba(35, 32, 28, .045);
-  --serif: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, "Noto Serif JP", serif;
+  --bg: #fffaf4;
+  --surface: #fffdfa;
+  --surface-2: #fdf3e9;
+  --ink: #3d352d;
+  --ink-2: #5c5046;
+  --muted: #7a6a5c;
+  --line: #f2e5d7;
+  --line-2: #e6d5c3;
+  --accent: #d98a63;
+  --accent-ink: #b25a3c;
+  --accent-bg: #fff2e8;
+  --price: #b03f2c;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgba(120, 88, 62, .06), 0 6px 18px rgba(120, 88, 62, .06);
+  --round: "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN W4", "Zen Maru Gothic", "M PLUS Rounded 1c", -apple-system, "Noto Sans JP", sans-serif;
   --sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
 }
 * { box-sizing: border-box; }
@@ -33,32 +33,32 @@ body {
 /* ヘッダー */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; align-items: center; gap: 1rem; min-height: 3.75rem; flex-wrap: wrap; }
-.brand { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: .02em; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--round); font-size: 1.05rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: .02em; }
 .brand svg { width: 1.25rem; height: 1.25rem; flex: none; color: var(--accent); }
 .site-nav { margin-left: auto; display: flex; gap: 1.1rem; font-size: .875rem; }
 .site-nav a { color: var(--ink-2); text-decoration: none; padding: .2rem 0; border-bottom: 1px solid transparent; }
 .site-nav a:hover { color: var(--accent-ink); border-bottom-color: var(--accent); }
 
 /* 導入部 */
-.hero { background: linear-gradient(180deg, var(--accent-bg), var(--bg)); border-bottom: 1px solid var(--line); padding: 2.75rem 0 2.25rem; }
-.hero h1 { margin: 0 0 .9rem; font-family: var(--serif); font-size: 1.85rem; line-height: 1.5; font-weight: 600; letter-spacing: .01em; }
+.hero { background: linear-gradient(180deg, #fff1e3, var(--bg)); border-bottom: 1px solid var(--line); padding: 2.75rem 0 2.25rem; }
+.hero h1 { margin: 0 0 .9rem; font-family: var(--round); font-size: 1.85rem; line-height: 1.5; font-weight: 600; letter-spacing: .01em; }
 .hero .lead { margin: 0; color: var(--ink-2); }
 .hero .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0 0; padding: 0; list-style: none; }
 .hero .facts li { background: var(--surface); border: 1px solid var(--line-2); border-radius: 999px; padding: .25rem .8rem; font-size: .85rem; color: var(--ink-2); }
 .hero .facts b { color: var(--price); font-weight: 600; }
 .actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.5rem; }
-.btn { display: inline-block; padding: .6rem 1.25rem; border-radius: var(--radius); font-size: .95rem; text-decoration: none; border: 1px solid var(--accent); }
-.btn-main { background: var(--accent); color: #fff; }
-.btn-main:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
-.btn-sub { background: var(--surface); color: var(--accent-ink); }
+.btn { display: inline-block; padding: .65rem 1.4rem; border-radius: 999px; font-size: .95rem; text-decoration: none; border: 1px solid var(--accent); }
+.btn-main { background: var(--accent-ink); color: #fff; border-color: var(--accent-ink); }
+.btn-main:hover { background: #9e4c30; border-color: #9e4c30; }
+.btn-sub { background: var(--surface); color: var(--accent-ink); border-color: var(--line-2); }
 .btn-sub:hover { background: var(--accent-bg); }
 
 /* 本文 */
 main { padding: 0; }
 .page { padding: 2.5rem 0 1rem; }
-.page > h1 { margin: 0 0 1.1rem; font-family: var(--serif); font-size: 1.6rem; line-height: 1.55; font-weight: 600; }
-h2 { margin: 2.6rem 0 .8rem; font-family: var(--serif); font-size: 1.2rem; line-height: 1.6; font-weight: 600; }
-h2::before { content: ""; display: inline-block; width: .2rem; height: .95em; background: var(--accent); border-radius: 2px; margin-right: .55rem; vertical-align: -.08em; }
+.page > h1 { margin: 0 0 1.1rem; font-family: var(--round); font-size: 1.6rem; line-height: 1.55; font-weight: 600; }
+h2 { margin: 2.6rem 0 .8rem; font-family: var(--round); font-size: 1.2rem; line-height: 1.6; font-weight: 600; }
+h2::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--accent); border-radius: 50%; margin-right: .6rem; vertical-align: .12em; }
 h3 { margin: 1.8rem 0 .5rem; font-size: 1.02rem; }
 p { margin: 0 0 1.1rem; }
 a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: .18em; }
@@ -81,8 +81,8 @@ main li { margin-bottom: .45rem; }
 .sets { display: grid; gap: 1rem; margin: 1.4rem 0; }
 .set { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0; overflow: hidden; }
 .set-head { display: flex; align-items: baseline; gap: .6rem; padding: .85rem 1.1rem; background: var(--surface-2); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-.set-no { font-family: var(--serif); font-size: .85rem; color: var(--muted); }
-.set-total { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--price); letter-spacing: .01em; }
+.set-no { font-family: var(--round); font-size: .85rem; color: var(--muted); }
+.set-total { font-family: var(--round); font-size: 1.35rem; font-weight: 600; color: var(--price); letter-spacing: .01em; }
 .set-total small { font-size: .7em; font-weight: 400; }
 .set-over { font-size: .8rem; color: var(--muted); margin-left: auto; }
 .set-body { padding: .9rem 1.1rem 1.1rem; }
@@ -91,7 +91,7 @@ main li { margin-bottom: .45rem; }
 .set-body li:first-child { border-top: 0; padding-top: 0; }
 .set-body li a { flex: 1; font-size: .93rem; line-height: 1.7; }
 .price { color: var(--price); white-space: nowrap; font-size: .9rem; font-variant-numeric: tabular-nums; }
-.after { margin: .9rem 0 0; padding: .45rem .75rem; background: var(--accent-bg); border-radius: 6px; color: var(--accent-ink); font-size: .85rem; display: inline-block; }
+.after { margin: .9rem 0 0; padding: .45rem .85rem; background: var(--accent-bg); border-radius: 999px; color: var(--accent-ink); font-size: .85rem; display: inline-block; }
 .mini { font-size: .93rem; }
 
 /* 表・定義リスト */
@@ -120,16 +120,3 @@ tbody tr:hover td { background: #fcfbf9; }
 .site-footer a { color: var(--ink-2); text-decoration: none; }
 .site-footer a:hover { color: var(--accent-ink); text-decoration: underline; }
 .site-footer .note { margin: 1.8rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--line); }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1816; --surface: #211f1c; --surface-2: #272420;
-    --ink: #ebe6de; --ink-2: #c3bcb1; --muted: #9a9288;
-    --line: #33302b; --line-2: #443f38;
-    --accent: #4fb3bf; --accent-ink: #7fcbd4; --accent-bg: #1e2c2e;
-    --price: #e8846f;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
-  }
-  .btn-main { color: #10201f; }
-  tbody tr:hover td { background: #262320; }
-}
